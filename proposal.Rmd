@@ -1,0 +1,39 @@
+
+
+# Problem
+
+One of the reasons R has become so popular is because of its first-class implementation of literate progamming. The seamless integration of code and text made possible by packages such as Sweave, knitr, and Rmarkdown, has not only allowed users to write reproducible reports, it has also made possible to write tutorials and design courses. However, while current packages offer a lot of flexibility to control how the content of these courses are rendered, they lack the built-in features that are expected from teaching materials. Here, we propose to write an R package that relies and extends knitr and bookdown to meet the needs of instructors interested in developing teaching materials in R and the other languages supported by knitr. This package tentatively named lessondown, will facilitate the development of consistent teaching resources while encouraging best practices by having markup available for the elements needed in teaching materials such as "learning objectives", "keypoints", "exercises" and their solutions. By facilitating the technical framework for developing quality teaching materials for R, we hope to encourage collaborative lesson development by letting authors focus on the content of the lessons rather than the formatting, while providing a more consistent experience to learners on their path to becoming proficient users.
+
+Development efforts for lesson material for R have mainly focused on creating interactive learning environment as demonstrated by the [tutorial package](https://github.com/datacamp/tutorial) by DataCamp, and the [learnr package](https://github.com/rstudio/learnr) by RStudio. The work proposed here comes in complement of these efforts. Both tutorial and learnr rely on rmarkdown to process the source of the lesson material to convert into their respective output formats. The goal of lessondown is to provide markup options that would be compatible with these packages to provide structure and guidelines that pedagogical research have indicated improve learning. The template that lessondown will provide would also be compatible as a static, self-contained website making it easy to distribute and teach in remote places where internet connection is not ubiquitous. 
+
+
+
+# The Plan
+
+We would like to develop an R package, lessondown, that provides a flexible and easy-to-use template specifically designed for teaching materials. This package will provide HTML/CSS and LaTeX templates to encourage the inclusion of the elements needed in teaching material. These include the "call out" boxes,  pre-requisites, learning objectives, exercises, their solutions, and the estimated time it takes for teaching and going through the exercises.
+
+Using a consistent template for teaching materials will not only make lessons more modular, facilitating re-use and re-mix of the content (when the authors chose a license that allows it), it will also make it easier for the community to contribute and improve the material.
+
+The package will include ways to check the teaching material follows some of the best practices using automated checks in a way that is similar to the goodpractice package for package development. 
+
+This package is the first step of a larger project aimed at facilitating teaching material discoverability, and attribution. Next steps will involve the development of a metadata standard for teaching material (similarly to similar current efforts for code such as [codemeta](https://codemeta.github.io)), and a website for       develop structured metadata, and a catalog of tutorials for R lessons and other topics.
+
+## Timeline
+
+## Failure modes and recovery
+
+# The Team
+
+The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson material using a custom Jekyll template. This template is difficult to use, maintain, and yet instructors use it outside The Carpentries because of the structure and features it provides. It also seems that some people want to have this static learnr template as indicated in this [issue](https://github.com/rstudio/learnr/issues/114).
+
+François Michonneau is the Curriculum Development Lead for The Carpentries, and is an experienced R developer. He implemented the integration between the Jekyll lesson template and Rmarkdown used by The Carpentries. He will lead the development of this package.
+
+# Project milestones
+
+# How can the ISC help?
+
+# Dissemination
+
+# References
+
+* 
