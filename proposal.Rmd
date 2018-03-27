@@ -2,23 +2,46 @@
 
 # Problem
 
-One of the reasons R has become so popular is because of its first-class implementation of literate progamming. The seamless integration of code and text made possible by packages such as Sweave, knitr, and Rmarkdown, has not only allowed users to write reproducible reports, it has also made possible to write tutorials and design courses. However, while current packages offer a lot of flexibility to control how the content of these courses are rendered, they lack the built-in features that are expected from teaching materials. Here, we propose to write an R package that relies and extends knitr and bookdown to meet the needs of instructors interested in developing teaching materials in R and the other languages supported by knitr. This package tentatively named lessondown, will facilitate the development of consistent teaching resources while encouraging best practices by having markup available for the elements needed in teaching materials such as "learning objectives", "keypoints", "exercises" and their solutions. By facilitating the technical framework for developing quality teaching materials for R, we hope to encourage collaborative lesson development by letting authors focus on the content of the lessons rather than the formatting, while providing a more consistent experience to learners on their path to becoming proficient users.
+One of the reasons R has become so popular is because of its first-class implementation of literate progamming. The seamless integration of code and text made possible by packages such as Sweave, knitr, and Rmarkdown, has not only allowed users to write reproducible reports, it has also made possible to write a variety of teaching materials such as tutorials, books, and courses. However, while current packages offer a lot of flexibility to control how the content of these courses are rendered, they lack the built-in features that are expected from teaching materials. Here, we propose to write an R package that relies on existing packages such as knitr and bookdown, to meet the needs of instructors interested in developing teaching materials. We are especially interested in building resources that foster collaborative code-rich lesson development as it is our aim in The Carpentries.
 
-Development efforts for lesson material for R have mainly focused on creating interactive learning environment as demonstrated by the [tutorial package](https://github.com/datacamp/tutorial) by DataCamp, and the [learnr package](https://github.com/rstudio/learnr) by RStudio. The work proposed here comes in complement of these efforts. Both tutorial and learnr rely on rmarkdown to process the source of the lesson material to convert into their respective output formats. The goal of lessondown is to provide markup options that would be compatible with these packages to provide structure and guidelines that pedagogical research have indicated improve learning. The template that lessondown will provide would also be compatible as a static, self-contained website making it easy to distribute and teach in remote places where internet connection is not ubiquitous. 
+This package tentatively named lessondown, will facilitate the development of consistent teaching resources while encouraging best practices by having markup available for the elements needed in teaching materials such as "learning objectives", "keypoints", "exercises" and their solutions. By providing the technical framework for developing quality teaching materials, we hope to encourage collaborative lesson development by letting authors focus on the content of the lessons rather than the formatting, while providing a more consistent experience for the learners.
+
+Development efforts for the tools to help teaching materials for R have mainly focused on creating interactive learning environment as demonstrated by the [tutorial package](https://github.com/datacamp/tutorial) by DataCamp, and the [learnr package](https://github.com/rstudio/learnr) by RStudio. In both cases, the learner is provided with some example code in an editor window, and a R terminal running in the cloud. The work proposed here comes in complement of these efforts. Both tutorial and learnr rely on the rmarkdown package to process the source of the lesson material to convert them into their respective output formats. The goal of lessondown is to provide additional markup that would be compatible with these packages to provide structure and guidelines that pedagogical research have indicated support and improve learning. The template that lessondown will provide would also be compatible as a static, self-contained website making it easy to distribute and teach in remote places where internet connection is not ubiquitous. 
 
 
 
 # The Plan
 
-We would like to develop an R package, lessondown, that provides a flexible and easy-to-use template specifically designed for teaching materials. This package will provide HTML/CSS and LaTeX templates to encourage the inclusion of the elements needed in teaching material. These include the "call out" boxes,  pre-requisites, learning objectives, exercises, their solutions, and the estimated time it takes for teaching and going through the exercises.
+We would like to develop an R package, lessondown, that provides a flexible and easy-to-use template specifically designed for teaching materials. This package will provide styling elements (e.g., HTML/CSS and LaTeX), and templates to encourage the inclusion of the elements needed in teaching material. These include pre-requisites, learning objectives, the "call out" boxes, exercises, their solutions, and the estimated time it takes for teaching and going through the exercises.
+
+We are not planning on re-inventing any wheels, instead we will leverage the flexibility that knitr, rmarkdown, and bookdown provide to create [knitr engines](https://yihui.name/knitr/demo/engines/), make use of Rmarkdown [templates](https://rmarkdown.rstudio.com/developer_document_templates.html), and [parametrized reports](https://rmarkdown.rstudio.com/developer_parameterized_reports.html) to make easily accessible to lesson creators the elements they need in their teaching.
 
 Using a consistent template for teaching materials will not only make lessons more modular, facilitating re-use and re-mix of the content (when the authors chose a license that allows it), it will also make it easier for the community to contribute and improve the material.
 
-The package will include ways to check the teaching material follows some of the best practices using automated checks in a way that is similar to the goodpractice package for package development. 
+The package will include ways to check the teaching material follows some of the best practices using automated checks in a way that is similar to what goodpractice does for package development. We will also provide the scripts and configuration files needed to take advantage of continuous integration (e.g. Travis CI) to run these automated checks as well checks on spelling and broken links, each time the lesson changes.
 
-This package is the first step of a larger project aimed at facilitating teaching material discoverability, and attribution. Next steps will involve the development of a metadata standard for teaching material (similarly to similar current efforts for code such as [codemeta](https://codemeta.github.io)), and a website for       develop structured metadata, and a catalog of tutorials for R lessons and other topics.
+This package is the first step of a larger project aimed at facilitating teaching material discoverability, and attribution. Next steps will involve the development of a metadata standard for teaching material (similarly to efforts for software such as [codemeta](https://codemeta.github.io)), and a website repository to list and find tutorials and lessons.
 
 ## Timeline
+
+The Carpentries is uniquely positioned to implement this project as we have dozens of lessons that we can use as a test bed for this package. We will test the initial versions of the package against an increasing number of our lessons, and adapt the package based on the feedback from our community (both lesson maintainers, and learners). Our lessons cover a variety of software and discipline ensuring that the package we will develop will be useful across many contexts.
+
+* Week 1-3: Implementation of the initial version of lessondown package
+* Weeks 4-19: 4 cycles of 4 weeks, with test of the package on additional lessons at each cycle
+  - week a: conversion of existing lessons to lessondown
+  - week b-c: evaluate package and ask feedback from community
+  - week d: implement changes
+  
+  For weeks 4-7: We'll work on [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
+  
+  For weeks 8-11: We'll work on Software Carpentry R lessons: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) and [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
+  
+  For weeks 12-15: We'll test lessondown on our Geospatial and Genomics Curricula
+  
+  For weeks 16-19: We'll use lessondown on all our lessons.
+  
+* Week 20-22: Finalize package and submit to CRAN
+
 
 ## Failure modes and recovery
 
