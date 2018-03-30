@@ -1,5 +1,5 @@
 ---
-title: "Developping tools and templates for lesson materials in R"
+title: "Developing tools and templates for lesson materials in R"
 date: April 1st, 2018
 author: François Michonneau on behalf of "The Carpentries"
 output: pdf_document
@@ -7,11 +7,11 @@ output: pdf_document
 
 # Problem
 
-The first-class implementation of literate programming in R is one of the reasons of its success. While the seamless integration of code and text made possible by `Sweave`, `knitr`, and `Rmarkdown`, was designed for writing reproducible reports and documentation, it has also enabled the creation of teaching materials. Ensuring that the code and the output included in these materials remain synchronized facilitated the creation of high-quality teaching resources that learners could use to get familiar with R and its ecosystem of packages. However, these tools lack the features that are expected to be included in teaching materials. The authors have to recreate them in ways that are not portable to other contexts, or that are "hacky" and hinder contributions by others. Here, we propose to write an R package that relies on existing tools (such as `knitr`, `rmarkdown`, and `bookdown`), to meet the needs of teaching materials. We are especially interested in building resources that foster collaborative development for code-rich lessons, as it is our aim in The Carpentries. We envision that this package would solidify R's position as the tool of choice to create code-rich teaching material.
+The first-class implementation of literate programming in R is one of the reasons for its success. While the seamless integration of code and text made possible by `Sweave`, `knitr`, and `Rmarkdown`, was designed for writing reproducible reports and documentation, it has also enabled the creation of teaching materials. Ensuring that the code and the output included in these materials remain synchronized facilitated the creation of high-quality teaching resources that learners could use to get familiar with R and its ecosystem of packages. However, these tools lack the features that are expected to be included in teaching materials. The authors have to recreate them in ways that are not portable to other contexts, or that are "hacky" and hinder contributions by others. Here, we propose to write an R package that relies on existing tools (such as `knitr`, `rmarkdown`, and `bookdown`), to meet the needs of teaching materials. We are especially interested in building resources that foster collaborative development for code-rich lessons, as it is our aim in The Carpentries. We envision that this package would solidify R's position as the tool of choice to create code-rich teaching material.
 
-This package tentatively named `lessondown`, will facilitate the development of consistent teaching resources, and encourage best practices by having markup and templates available for "learning objectives", "keypoints", "exercises" and their solutions. Pedagogical research has shown that these elements support and improve learning. By providing the technical framework for developing quality teaching materials, we want to encourage collaborative lesson development by letting authors focus on the content rather than the formatting, while providing a more consistent experience for the learners. Additionally, as part of `lessondown` we want to make the identification of the package and system dependencies needed clear so learners can run the examples and exercises provided on their own systems. We will also provide ways to bundle and distribute data sets and teaching materials automatically so they can be distributed using `usethis::use_course()`.
+This package tentatively named `lessondown`, will facilitate the development of consistent teaching resources, and encourage best practices by having markup and templates available for "learning objectives", "keypoints", "exercises" and their solutions. Pedagogical research has shown that these elements support and improve learning. By providing the technical framework for developing quality teaching materials, we want to encourage collaborative lesson development by letting authors focus on the content rather than the formatting while providing a more consistent experience for the learners. Additionally, as part of `lessondown`, we want to make the identification of the package and system dependencies needed clear so learners can run the examples and exercises provided on their own systems. We will also provide ways to bundle and distribute data sets and teaching materials automatically so they can be distributed using `usethis::use_course()`.
 
-Development efforts for the tools associated with teaching materials for R have mainly focused on creating interactive learning environments as exemplified by the [`tutorial` package](https://github.com/datacamp/tutorial) by DataCamp, and the [`learnr` package](https://github.com/rstudio/learnr) by RStudio. In both cases, the learner is provided with an editor window that may contain some examples of code, and an R terminal running in the cloud that are embedded within the body of the lesson. The work proposed here comes in complement to these efforts. Both `tutorial` and `learnr` rely on the `rmarkdown` package to process the source of the lesson material to convert them into their respective output formats. One of the goals of `lessondown` is to provide markup similarly to what the roxygen format does for R package documentation, and to generate valid Rmarkdown that can be processed by existing packages. 
+Development efforts for the tools associated with teaching materials for R have mainly focused on creating interactive learning environments as exemplified by the [`tutorial` package](https://github.com/datacamp/tutorial) by DataCamp, and the [`learnr` package](https://github.com/rstudio/learnr) by RStudio. In both cases, the learner is provided with an editor window that may contain some examples of code and an R terminal running in the cloud, that are embedded within the body of the lesson. The work proposed here comes in complement to these efforts. Both `tutorial` and `learnr` rely on the `rmarkdown` package to process the source of the lesson material to convert them into their respective output formats. One of the goals of `lessondown` is to provide markup similarly to what the roxygen format does for R package documentation, and to generate valid Rmarkdown that can be processed by existing packages. 
 
 
 # The Plan
@@ -20,7 +20,7 @@ We will develop an R package that provides tools and templates that are flexible
 
 We will leverage The Carpentries' experience building lesson templates and collaborative online teaching materials. We will test the package on our dozens of lessons, and receive support from our community of lesson contributors and maintainers to get feedback on its features and usability.
 
-This package is the first step of a larger project aimed at facilitating teaching material discoverability, and attribution. Next steps will involve the development of a metadata standard for teaching material (similarly to efforts for software such as [codemeta](https://codemeta.github.io)), and an online repository to list and find tutorials and lessons. Having a widely used structure for teaching materials will ensure that it will be possible to add the metadata to it once the standard has been established.
+This package is the first step of a larger project aimed at facilitating teaching material discoverability and attribution. Next steps will involve the development of a metadata standard for teaching material (similarly to efforts for software such as [codemeta](https://codemeta.github.io)), and an online repository to list and find tutorials and lessons. Having a widely used structure for teaching materials will ensure that it will be possible to add the metadata to it once the standard has been established.
 
 There will be 3 components to this package:
 
@@ -28,7 +28,7 @@ There will be 3 components to this package:
 1. **Dependencies: system and data.** Among [The Carpentries teaching practices](https://carpentries.github.io/instructor-training/22-practices/#learners-use-their-own-machines), we want learners to use their own system (instead of using the cloud for example), so they leave our workshops set up to continue learning on their own, and in the process learn how to troubleshoot possible installation issues. However, this requires that the system dependencies needed by the exercises and examples in the lessons are known and can be communicated to the learners. Another type of dependencies for teaching material is documenting the datasets that are used in the lessons. `lessondown` will help by communicating 
 1. **Deployment and rendering.** We will also provide the scripts and configuration files needed to take advantage of continuous integration (e.g. Travis CI) to check spelling and broken links, build the rendered version of the lesson, and create bundles of the lesson material and datasets that can be distributed with `usethis::use_course()`.
 
-For `lessondown`, we are not planning on re-inventing any wheels, instead we will leverage the tools that have been developed for R packages and document authoring, and make them work together in a way that is convenient when assembling teaching materials. There is
+For `lessondown`, we are not planning on re-inventing any wheels, instead, we will leverage the tools that have been developed for R packages and document authoring, and make them work together in a way that is convenient when assembling teaching materials. There is
 
 Using a consistent template and tooling will not only make lessons more modular, facilitating re-use and re-mix of the content (when the authors chose a license that allows it), it will also make it easier for the community to contribute and improve the material.
 
@@ -36,13 +36,13 @@ Using a consistent template and tooling will not only make lessons more modular,
 
 ## Timeline
 
-The Carpentries is uniquely positioned to implement this project as we have dozens of lessons that we can use as a test bed for this package. We will test the initial versions of the package against an increasing number of our lessons, and adapt the package based on the feedback from our community. Our lessons cover a variety of software and discipline ensuring that the package we will develop will be useful across many contexts.
+The Carpentries is uniquely positioned to implement this project as we have dozens of lessons that we can use as a test bed for this package. We will test the initial versions of the package against an increasing number of our lessons, and adapt the package based on the feedback from our community. Our lessons cover a variety of software and discipline ensuring that the package we will develop will be useful in many contexts.
 
 * Week 1-3: Implementation of the initial version of `lessondown` package.
 * Weeks 4-19: 4 cycles of 4 weeks, with tests of the package on an increasing number of lessons at each cycle.
 
     - week a: conversion of existing lessons to `lessondown`
-    - week b-c: evaluate package and ask feedback from community
+    - week b-c: evaluate package and ask feedback from the community
     - week d: implement changes
   
         + For weeks 4-7: We'll work on [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
@@ -63,9 +63,13 @@ The Carpentries is uniquely positioned to implement this project as we have doze
 
 # The Team
 
-The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained volunteer instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson material using a custom Jekyll template. This template is difficult to use, maintain, and yet instructors use it outside The Carpentries because of the structure and features it provides, and the lack of alternatives.
+The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained volunteer instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson materials using a combination of RMarkdown and a custom Jekyll template. This template is difficult to use, maintain. Yet many people use it outside The Carpentries because of the structure and features it provides, and the lack of alternatives.
 
-François Michonneau is the Curriculum Development Lead for The Carpentries, and is an experienced R developer with 7 authored and co-authored packages on CRAN. He implemented the integration between the Jekyll lesson template and Rmarkdown currently used by The Carpentries. Additionally, he has prototyped many of the ideas proposed here in the [Data Carpentry R Ecology lesson](http://datacarpentry.org/R-ecology-lesson). He will lead the development of this package.
+François Michonneau is the Curriculum Development Lead for The Carpentries and an experienced R developer with 7 authored and co-authored packages on CRAN. He implemented the integration between the Jekyll lesson template and Rmarkdown currently used by The Carpentries. Additionally, he has prototyped many of the ideas proposed here in the [Data Carpentry R Ecology lesson](http://datacarpentry.org/R-ecology-lesson). He will lead the development of this package, write the blog posts, and the article to be submitted to the R Journal.
+
+Naupaka Zimmerman has been involved with The Carpentries since 2013. He is the author and maintainer of two R lessons (R for Reproducible Scientific Analysis, and Analysis of Genomic data with R) with The Carpentries, and has taught numerous workshops. He is familiar with the challenges associated with developing lesson material and delivering workshops.
+
+Tracy Teal is the Executive Directory for The Carpentries. She will provide oversight of the project.
 
 # Project milestones
 
@@ -80,7 +84,7 @@ The ISC can help by providing funding support for this project. Funding will be 
 
 # Dissemination
 
-The development of the package will be open and the code will be made available on GitHub from the beginning. The code written will be made available under an MIT license and the templates released under a CC0 license.
+The development of the package will be open and the code will be made available on GitHub from the beginning. The code will be made available under an MIT license and the templates released under a CC0 license.
 
 The tools and templates developed will be tested and used by all The Carpentries lessons. Our lessons are taught in workshops 100+ times a year, and the material is available online and accessed by 10,000+ unique visitors a year.
 
