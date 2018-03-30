@@ -58,17 +58,35 @@ The Carpentries is uniquely positioned to implement this project as we have doze
 
 ## Failure modes and recovery
 
+
+
+
 # The Team
 
-The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson material using a custom Jekyll template. This template is difficult to use, maintain, and yet instructors use it outside The Carpentries because of the structure and features it provides. It also seems that some people want to have this static learnr template as indicated in this [issue](https://github.com/rstudio/learnr/issues/114).
+The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained volunteer instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson material using a custom Jekyll template. This template is difficult to use, maintain, and yet instructors use it outside The Carpentries because of the structure and features it provides, and the lack of alternatives.
 
-François Michonneau is the Curriculum Development Lead for The Carpentries, and is an experienced R developer. He implemented the integration between the Jekyll lesson template and Rmarkdown used by The Carpentries. He will lead the development of this package.
+François Michonneau is the Curriculum Development Lead for The Carpentries, and is an experienced R developer with 7 authored and co-authored packages on CRAN. He implemented the integration between the Jekyll lesson template and Rmarkdown currently used by The Carpentries. Additionally, he has prototyped many of the ideas proposed here in the [Data Carpentry R Ecology less](http://datacarpentry.org/R-ecology-lesson). He will lead the development of this package.
 
 # Project milestones
 
+1. **Initial development ($2,500)** -- Funding for initial development of the package.
+1. **Milestone #1 -- week 11 ($2,500)** -- Half way through the project, beta version of the package is used by at least 3 of our lessons, post on the R consortium blog.
+1. **Milestone #2 -- week 22 ($5,000)** -- Completion of the project, package published on CRAN, all The Carpentries lesson use the package, post of the R consortium blog, publication about package submitted to R Journal.
+
 # How can the ISC help?
 
+The ISC can help by providing funding support for this project. Funding will be used to cover part of François Michonneau's salary as he leads the development efforts of this package and travel costs to attend conferences to present the result of this work.
+
+
 # Dissemination
+
+The development of the package will be open and the code will be made available on GitHub from the beginning. The code written will be made available under an MIT license and the templates released under a CC0 license.
+
+The tools and templates developed will be tested and used by all The Carpentries lessons. Our lessons are taught in workshops 100+ times a year, and the material is available online and accessed by 10,000+ unique visitors a year.
+
+The package will be made available on CRAN when stable.
+
+We will present `lessondown` at conferences including useR!2019, write at least 2 posts over the duration of the project on the R consortium and The Carpentries blogs, and submit a paper to the "R teaching column" of the R Journal.
 
 # References
 
