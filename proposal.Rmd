@@ -51,23 +51,23 @@ The Carpentries is uniquely positioned to implement this project as the organiza
   
         + For weeks 12-15: We'll convert and test `lessondown` on  our Geospatial and Genomics Curricula.
   
-        + For weeks 16-19: We'll convert and test `lessondown` on all our lessons.
+        + For weeks 16-19: We'll convert and test `lessondown` on all "The Carpentries" lessons.
   
 * Weeks 20-22: Finalize package and submit to CRAN
 
 
 ## Failure modes and recovery
 
-
+One of the possible failures would be to build a package that would not be applicable beyond The Carpentries. To avoid this, we will publicize our work early-on (through the R consortium blog and Twitter), in order to get feedback from early adopters on teaching materials that are not part of The Carpentries.
 
 
 # The Team
 
-The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained volunteer instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson materials using a combination of RMarkdown and a custom Jekyll template. This template is difficult to use, maintain. Yet many people use it outside The Carpentries because of the structure and features it provides, and the lack of alternatives.
+The Carpentries is a non-profit organization resulting from the merger of Software Carpentry and Data Carpentry. The Carpentries is a global community of 1,300+ trained volunteer instructors, who have taught workshops that have reached 30,000+ learners. Our workshops teach introductory computing and data analytical skills to researchers. R is taught in more than half of our workshops. All the lessons materials are available for free, under a Creative Commons Attribution License, and have been developed by hundreds of contributors. We render our lesson materials using a combination of RMarkdown and a custom Jekyll template. This template is difficult to use and maintain. Yet many people outside The Carpentries use it  because of the structure and features it provides.
 
 François Michonneau is the Curriculum Development Lead for The Carpentries and an experienced R developer with 7 authored and co-authored packages on CRAN. He implemented the integration between the Jekyll lesson template and Rmarkdown currently used by The Carpentries. Additionally, he has prototyped many of the ideas proposed here in the [Data Carpentry R Ecology lesson](http://datacarpentry.org/R-ecology-lesson). He will lead the development of this package, write the blog posts, and the article to be submitted to the R Journal.
 
-Naupaka Zimmerman has been involved with The Carpentries since 2013. He is the author and maintainer of two R lessons (R for Reproducible Scientific Analysis, and Analysis of Genomic data with R) with The Carpentries, and has taught numerous workshops. He is familiar with the challenges associated with developing lesson material and delivering workshops.
+Naupaka Zimmerman has been involved with The Carpentries since 2013. He is the author and maintainer of two R lessons with The Carpentries (R for Reproducible Scientific Analysis, and Analysis of Genomic data with R). He has taught numerous workshops both within and outside The Carpentries. He is familiar with the challenges associated with developing lesson material and delivering workshops.
 
 Tracy Teal is the Executive Directory for The Carpentries. She will provide oversight of the project.
 
@@ -79,19 +79,21 @@ Tracy Teal is the Executive Directory for The Carpentries. She will provide over
 
 # How can the ISC help?
 
-The ISC can help by providing funding support for this project. Funding will be used to cover part of François Michonneau's salary as he leads the development efforts of this package and travel costs to attend conferences to present the result of this work.
+The ISC can help by providing funding support for this project. Funding will be used to cover part of François Michonneau's salary as he leads the development efforts of this package, and travel costs to attend conferences to present this work.
 
 
 # Dissemination
 
-The development of the package will be open and the code will be made available on GitHub from the beginning. The code will be made available under an MIT license and the templates released under a CC0 license.
+The development of the package will be open and the code will be made available on GitHub from the beginning. The code will be made available under an MIT license and the templates included in the package released under a CC0 license. The package will be made available on CRAN when tested and stable.
 
-The tools and templates developed will be tested and used by all The Carpentries lessons. Our lessons are taught in workshops 100+ times a year, and the material is available online and accessed by 10,000+ unique visitors a year.
-
-The package will be made available on CRAN when stable.
+The tools and templates developed will be tested and used by all The Carpentries lessons. Our lessons are taught in workshops 100+ times a year, and the materials are available online and accessed by 10,000+ unique visitors a year.
 
 We will present `lessondown` at conferences including useR!2019, write at least 2 posts over the duration of the project on the R consortium and The Carpentries blogs, and submit a paper to the "R teaching column" of the R Journal.
 
-# References
+# Acknowledgements
+
+Mine Cetinkaya-Rundel and Jenny Bryan provided useful feedback on an earlier draft of this proposal.
+
+# Referrences
 
 * 
