@@ -2,7 +2,12 @@
 title: "Developing Tools and Templates for Teaching Materials"
 date: April 1st, 2018
 author: François Michonneau on behalf of "The Carpentries"
-output: pdf_document
+output: 
+    pdf_document:
+       latex_engine: xelatex
+       includes:
+        in_header: font_def.tex
+urlcolor: #071159
 ---
 
 # Problem
@@ -45,13 +50,13 @@ The Carpentries is uniquely positioned to implement this project as the organiza
     - week b-c: evaluate package and ask feedback from the community
     - week d: implement changes
   
-        + For weeks 4-7: We'll work on the [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
+        + Weeks 4-7: conversion and test on [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
   
-        + For weeks 8-11: We'll work on Software Carpentry R lessons: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) and [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/).
+        + Weeks 8-11: conversion and test on Software Carpentry R lessons: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) and [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/).
   
-        + For weeks 12-15: We'll convert and test `lessondown` on  our Geospatial and Genomics Curricula.
+        + For weeks 12-15: conversion and test on our Geospatial and Genomics Curricula.
   
-        + For weeks 16-19: We'll convert and test `lessondown` on all "The Carpentries" lessons.
+        + For weeks 16-19: conversion and test on all "The Carpentries" lessons.
   
 * Weeks 20-22: Finalize package and submit to CRAN
 
@@ -92,8 +97,4 @@ We will present `lessondown` at conferences including useR!2019, write at least 
 
 # Acknowledgements
 
-Mine Cetinkaya-Rundel and Jenny Bryan provided useful feedback on an earlier draft of this proposal.
-
-# Referrences
-
-* 
+Mine Cetinkaya-Rundel and Jenny Bryan provided useful feedback on an earlier draft of this proposal. 
