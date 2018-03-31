@@ -74,7 +74,7 @@ François Michonneau is the Curriculum Development Lead for The Carpentries and 
 
 Naupaka Zimmerman has been involved with The Carpentries since 2013. He is the author and maintainer of two R lessons with The Carpentries (R for Reproducible Scientific Analysis, and Analysis of Genomic data with R). He has taught numerous workshops both within and outside The Carpentries. He is familiar with the challenges associated with developing lesson material and delivering workshops.
 
-Tracy Teal is the Executive Directory for The Carpentries. She will provide oversight of the project.
+Tracy Teal is the Executive Directory for The Carpentries. She has been involved with Software Carpentry and Data Carpentry since 2012, is the author of multiple Carpentries lessons and has been involved in the development of the lesson infrastructure. She will provide oversight of the project.
 
 # Project milestones
 
