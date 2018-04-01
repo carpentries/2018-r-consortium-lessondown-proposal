@@ -23,7 +23,7 @@ Development efforts for the tools associated with teaching materials for R have 
 
 # The Plan
 
-We will develop an R package that provides tools and templates that are flexible and easy-to-use, with the specific aim of designing teaching materials. This package will provide styling elements (e.g., HTML/CSS and LaTeX), and templates to encourage the inclusion of the elements needed in teaching materials. These include pre-requisites, learning objectives, the "call out" boxes, exercises, their solutions, and the estimated time it takes for teaching and going through the exercises. The templates we will develop 
+We will develop an R package that provides tools and templates that are flexible and easy-to-use, with the specific aim of designing teaching materials. This package will provide styling elements (e.g., HTML/CSS and LaTeX), and templates to encourage the inclusion of the elements needed in teaching materials. These include pre-requisites, learning objectives, the "call out" boxes, exercises, their solutions, and the estimated time it takes for teaching and going through the exercises. The templates will use best practices in web development to make them accessible and will be customizable to allow branding. We will collaborate with user experience experts to design templates that make learning enjoyable. 
 
 We will leverage The Carpentries' experience building lesson templates and collaborative online teaching materials. We will test the package on our dozens of lessons, and receive support from our community of lesson contributors and maintainers to get feedback on its features and usability.
 
