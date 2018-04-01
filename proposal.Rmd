@@ -43,25 +43,26 @@ Using a consistent template and tooling will not only make lessons more modular,
 
 ## Timeline
 
-The Carpentries is uniquely positioned to implement this project as the organization has been developing online teaching resources for more than 10 years. We have dozens of lessons that we can use as a test bed for this package. We will test the initial versions of the package against an increasing number of our lessons, and adapt the package based on the feedback from our community before releasing it on CRAN. Our lessons cover diverse software, disciplines, and locales (we have lessons in English and in Spanish) ensuring that the package will be useful in a variety of contexts.
+The Carpentries is uniquely positioned to implement this project as the organization has been developing online teaching resources for more than 10 years. We have dozens of lessons that we can use as a test bed for this package. We will test the initial versions of the package against an increasing number of our lessons, and adapt the package based on the feedback from our community before releasing it on CRAN. Our lessons cover diverse software (e.g., shell, SQL, python, R), disciplines, and locales (we have lessons in English and in Spanish) ensuring that the package will be useful in a variety of contexts and can be used for teaching languages other than R.
 
-* Week 1-3: Initial implementation of the `lessondown` package.
-* Weeks 4-19: 4 cycles of 4 weeks, with tests of the package on an increasing number of lessons at each cycle.
+* Week 1-4: Initial implementation of the `lessondown` package.
+* Weeks 5-20: 4 cycles of 4 weeks, with tests of the package on an increasing number of lessons at each cycle.
 
     - week a: conversion of existing lessons to `lessondown`
-    - week b-c: evaluate package and ask feedback from the community
+    - weeks b-c: evaluate package and ask feedback from the community
     - week d: implement changes
   
-        + Weeks 4-7: conversion and test on [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
+        + Weeks 5-8: conversion and test on [Data Carpentry R Ecology lesson](http://www.datacarpentry.org/R-ecology-lesson).
   
-        + Weeks 8-11: conversion and test on Software Carpentry R lessons: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) and [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/).
+        + Weeks 9-12: conversion and test on Software Carpentry R lessons: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) and [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/).
   
-        + For weeks 12-15: conversion and test on our Geospatial and Genomics Curricula.
+        + For weeks 13-16: conversion and test on our Geospatial and Genomics Curricula.
   
-        + For weeks 16-19: conversion and test on all "The Carpentries" lessons.
+        + For weeks 17-20: conversion and test on all "The Carpentries" lessons.
   
-* Weeks 20-22: Finalize package and submit to CRAN
+* Weeks 21-25: Finalize package and submit to CRAN
 
+Starting on week 13, we will reach out to members of our community, and work with authors of lessons outside The Carpentries to test the package on their teaching materials, and use their feedback to ensure that our package meet their needs.
 
 ## Failure modes and recovery
 
